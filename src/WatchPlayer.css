@@ -1,0 +1,210 @@
+
+.watch-page {
+  width: 100%;
+  margin-top: 35px;
+  color: #f5f2ff;
+}
+
+.watch-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 22px;
+}
+
+.watch-heading h2 {
+  font-size: 26px;
+  margin: 8px 0;
+}
+
+.watch-heading p {
+  color: #aaa4c4;
+  margin: 0;
+}
+
+.watch-label {
+  color: #a78bfa;
+  font-size: 11px;
+  letter-spacing: 3px;
+}
+
+.watch-star {
+  color: #a78bfa;
+  font-size: 32px;
+}
+
+.watch-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  gap: 22px;
+}
+
+.watch-main {
+  min-width: 0;
+}
+
+.watch-screen {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #080817;
+  border: 1px solid #30264d;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.watch-screen iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+
+.watch-message {
+  height: 100%;
+  min-height: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b9afd6;
+  padding: 20px;
+  text-align: center;
+}
+
+.watch-controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 18px 0;
+}
+
+.watch-control-group {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.watch-control-group span {
+  font-size: 12px;
+  color: #aaa4c4;
+}
+
+.watch-control-group select {
+  background: #17152a;
+  color: white;
+  border: 1px solid #393052;
+  border-radius: 8px;
+  padding: 10px 14px;
+  outline: none;
+}
+
+.watch-control-group select:focus {
+  border-color: #9b75ed;
+}
+
+.watch-episodes {
+  background: #111020;
+  border: 1px solid #29243e;
+  border-radius: 14px;
+  padding: 17px;
+  max-height: 520px;
+  overflow-y: auto;
+}
+
+.watch-episodes h3 {
+  font-size: 17px;
+  margin: 0 0 15px;
+}
+
+.episode-list {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+.episode-list button {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px;
+  background: #19172a;
+  border: 1px solid transparent;
+  border-radius: 9px;
+  color: #c9c2dd;
+  text-align: left;
+  cursor: pointer;
+}
+
+.episode-list button span:nth-child(2) {
+  flex: 1;
+  font-size: 12px;
+}
+
+.episode-list button.active {
+  background: #30234b;
+  border-color: #9570e5;
+  color: white;
+}
+
+.episode-arrow {
+  color: #a78bfa;
+  font-size: 20px;
+}
+
+.watch-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.watch-navigation button {
+  background: #211b36;
+  color: white;
+  border: 1px solid #493767;
+  border-radius: 8px;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+.watch-navigation button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.watch-navigation span,
+.watch-episode-title {
+  color: #c6bbdf;
+  font-size: 13px;
+}
+
+.watch-error {
+  color: #f0a2b3;
+  font-size: 13px;
+}
+
+@media (max-width: 850px) {
+  .watch-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .watch-episodes {
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 500px) {
+  .watch-controls {
+    gap: 10px;
+  }
+
+  .watch-control-group select {
+    max-width: 145px;
+  }
+
+  .watch-navigation button {
+    padding: 9px;
+    font-size: 11px;
+  }
+}
